@@ -11,6 +11,8 @@
     <style type="text/css">
       body {
         overflow-y: none;
+        background-color: #d1d1d1;
+        color: #666;
       }
       body::-webkit-scrollbar {
         display: none;
@@ -27,8 +29,8 @@
       .loading {
         width: 100%;
         height: 100vh;
-        font-weight: bold;
         font-family: sans-serif;
+        text-align: center;
         display: flex;
         justify-content: center;
         align-self: center;
@@ -38,7 +40,10 @@
   </head>
   <body>
     <div class="loading">
-      Loading Google Docs Viewer...
+      <div>
+        <p>Loading Google Docs Viewer...</p>
+        <img src="powered_by_google_on_white.png" alt="Powered by Google"/>
+      </div>
     </div>
     <iframe id="resume" src="http://docs.google.com/gview?url=https://github.com/alexcu/resume/raw/master/resume.pdf&embedded=true" frameborder="0"></iframe>
   </body>
