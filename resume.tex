@@ -1,0 +1,25 @@
+\documentclass[a4paper]{resume}
+
+\input{./sections/awards.tex}
+\input{./sections/contact.tex}
+\input{./sections/education.tex}
+\input{./sections/experience.tex}
+\input{./sections/extra.tex}
+\input{./sections/objective.tex}
+\input{./sections/referrals.tex}
+\input{./sections/skills.tex}
+
+\begin{document}
+
+\def \sepspace {\vspace{1em}}
+\makeheader{\contactphone}{\contactemail}{\contactwebsite}
+\section{Objective}{\small \objective}
+\section{Education}{\education}
+\section{Experience}{\experience}
+\section{Skills}{\skillstechnical}
+% \section{Non-Technical\\Skills}{\skillsgeneral}
+\section{Awards}{\awards}
+\section{Extra\\Curricular}{\extracurricular}
+\section{Referrals}{\referrals}
+
+\end{document}
