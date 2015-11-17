@@ -1,11 +1,15 @@
 %!TEX root = ../Resume.tex
-\newcommand{\job}[5]
+\newcommand{\job}[6]
 {
     {\fontseries{b} \normalsize #1 \hfill {#2}--{#3}}\\
-    {\small#4}
-    {\small\begin{itemize}
-        #5
-    \end{itemize}}
+    {
+        \small
+        #4\\
+        {\footnotesize #5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    }
     \sepspace
 }
 %///////////////////////////////////////////////////////
@@ -16,6 +20,7 @@
     \job{Associate Developer}
         {Aug 2015}{Present}
         {SEEK Ltd., Melbourne}
+        {\href{http://seek.com.au}{SEEK} is Australia's largest jobs, employment, career and recruitment website.}
         {
             \item Development of search relevance ranking tools to improve search quality on SEEK's website.
             \item Focus on scalable cloud computing architecture with Amazon Web Services.
@@ -23,7 +28,8 @@
         }
     \job{Software Engineer}
         {Aug 2014}{Aug 2015}
-        {Swinburne NICTA Software Innovation Lab, Hawthorn}
+        {Swinburne NICTA Software Innovation Lab (SSIL), Hawthorn}
+        {SSIL delivers research-driven high-impact software solutions and is partnered with NICTA.}
         {
             \item Developed projects across various domains including fleet visualiser (via Google Maps) and management software, website development, and a web-based IDE front-end (\href{http://rappt.io/}{http://rappt.io/}).
             \item Web Application Development using AngularJS, Middleman, Node.js; iOS App Development in Objective-C.
@@ -32,6 +38,7 @@
     \job{Introduction to Programming Tutor}
         {Mar 2014}{Aug 2015}
         {Swinburne University of Technology, Hawthorn}
+        {Teaching a first-year introductory programming unit taken by all students in technology-related fields.}
         {
             \item Delivering learning content to tutorials of 25 students via interactive sessions mixed with live-programming, concept discussions, running group work activities and one-to-one feedback
             \item Assisting students understand fundamental programming concepts by assessing and providing feedback on weekly submitted work from students
@@ -41,6 +48,7 @@
     \job{Web Application Developer (Pro Brono)}
         {Winter Break}{2014}
         {Swinburne University of Technology, Hawthorn}
+        {Development of a modern Learning Management System, \emph{Doubtfire}.}
         {
             \item Building a large-scale web application utilised in tutoring position for student progress tracking (\href{http://doubtfire.ict.swin.edu.au}{http://doubtfire.ict.swin.edu.au})
             \item Developing front-end development with Bootstrap and AngularJS
@@ -49,6 +57,7 @@
     \job{UI/UX Developer}
         {Mar 2014}{Aug 2014}
         {LeadSoftware, Melbourne}
+        {LeadSoftware specialises in complete tracking, logistic and dispatch systems.}
         {
             \item Lead UX and UI design for a large-scale on-board taxi system currently in deployment in a large taxi fleet
             \item Strong interaction with development team to explain prototypes and mock-ups developed and discuss feedback on implemented designs
@@ -57,6 +66,7 @@
     \job{Programming Help Desk Staff}
         {Aug 2013}{Dec 2013}
         {Swinburne University of Technology, Hawthorn}
+        {Providing assistance in out-of-class sessions with students.}
         {
             \item Assisting students learn syntax of C, Pascal, PHP, JavaScript
             \item Explaining programming concepts to students and working through logic problems in a enthusiastic and approachable environment
