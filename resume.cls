@@ -37,7 +37,7 @@
 \setlength{\footskip}{10pt}
 
 % Semibold & Venturis Font
-\usepackage[lf]{venturis} %% lf option gives lining figures as default; 
+\usepackage[lf]{venturis} %% lf option gives lining figures as default;
               %% remove option to get oldstyle figures as default
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
@@ -47,14 +47,15 @@
 \newcommand{\makeheader}[3]
 {
     \begin{adjustwidth}{-1.2in}{0} % Moves the main header out by 1.2 inches for the section margins
-        
-        
-        {\Huge Alex Cummaudo}\hfill \vspace{5pt}
-        \parbox[b]{10cm}{\flushright{\small #1\\#2\\#3}}\\ % You may need to adjust 2.42cm
+
+
+        \parbox[b]{10cm}{{\Huge Software Engineer} \\ {\Large Alex Cummaudo}}
+        \hfill
+        \parbox[b]{5cm}{\flushright{\small #1\\#2\\#3}}\\ % You may need to adjust 2.42cm
         %{\color{gray} \LARGE Resume}%
 
-        \vspace{-13mm}
-        
+        \vspace{-10mm}
+
         \begin{center}
             \line(1,0){\linewidth} % Adds a horizontal line
         \end{center}
