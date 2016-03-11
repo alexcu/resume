@@ -1,8 +1,12 @@
 %!TEX root = ../resume.tex
+\newcommand{\tagsep}
+{
+\vspace{\tagsepsize}\\
+}
 \newcommand{\skillset}[2]
 {
-    {\fontseries{b} \normalsize {#1}}
-    {\small #2}
+    {\fontseries{b} \normalsize {#1}}\vspace{0.4ex}\\
+    {\footnotesize #2}
 
     \sepspace
 }
@@ -13,46 +17,63 @@
 {
     \skillset{Core Strengths}
     {
-        \\
-        Web Application Development,
-        Mobile Application Development,
-        RESTful API Development,
-        Concurrent Program Design,
-        Teaching,
-        UI/UX Design and Prototyping,
-        Website Administration
+        \tag{Web Application Development}
+        \tag{Mobile Application Development}
+        \tag{RESTful API Development}
+        \tagsep
+        \tag{Concurrent Program Design}
+        \tag{Project Management}
+        \tag{Reporting}
+        \tag{UI/UX Design}
+        \tag{Prototyping}
+        \tagsep
+        \tag{Excellent Communication Skills}
+        \tag{Researching}
+        \tag{Teaching}
     }
+    \vspace{0.4em}
     \skillset{Technical Skills}
     {
-        \\
-        AngularJS,
-        Node.js,
-        iOS/Objective-C/Swift,
-        JavaScript/CoffeeScript/DOM,
-        SCSS/LESS/CSS3,
-        Bootstrap,
-        Ruby on Rails,
-        {\rmfamily \LaTeX},
-        \Csh/.NET,
-        C/\Cpp,
-        Pascal
+        \tag{Objective-C}
+        \tag{Swift}
+        \tag{Node.js}
+        \tag{JavaScript}
+        \tag{CoffeeScript}
+        \tag{DOM}
+        \tag{AngularJS}
+        \tag{Ruby on Rails}
+        \tagsep
+        \tag{Bootstrap}
+        \tag{SCSS}
+        \tag{LESS}
+        \tag{CSS3}
+        \tag{\rmfamily \LaTeX}
+        \tag{\Csh}
+        \tag{UIKit}
+        \tag{.NET}
+        \tag{C}
+        \tag{\Cpp}
+        \tag{Pascal}
     }
+    \vspace{0.4em}
     \skillset{Software}
     {
-        \\
-        Git,
-        AWS,
-        Apache2,
-        Nginx,
-        MySQL,
-        PostgreSQL,
-        MongoDB,
-        Xcode,
-        Xamarin,
-        Coda 2,
-        Trello,
-        Pixelmator,
-        Lucidchart
+        \tag{Git}
+        \tag{AWS}
+        \tag{Docker}
+        \tag{Apache2}
+        \tag{MySQL}
+        \tag{PostgreSQL}
+        \tag{MongoDB}
+        \tag{Nginx}
+        \tag{Xcode}
+        \tag{Atom}
+        \tagsep
+        \tag{Xamarin}
+        \tag{Coda 2}
+        \tag{Trello}
+        \tag{Pixelmator}
+        \tag{Lucidchart}
     }
 }
 % \def \skillsgeneral
