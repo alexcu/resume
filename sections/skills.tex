@@ -1,35 +1,39 @@
 \newcommand{\tagsep}
 {
-\vspace{\tagsepsize}\\
+    \vspace{\tagsepsize}\\
 }
 \newcommand{\skillset}[2]
 {
-    {\fontseries{b} \normalsize {#1}}\vspace{0.4ex}\\
-    {\footnotesize #2}
+    {
 
+      \\\textcolor{gray}{\footnotesize \uppercase \bfseries #1}\vspace{0.6ex}\\
+      {\mdseries #2}
+    }
     \sepspace
 }
 
 \def \skillstechnical
 {
-    \skillset{Core Strengths}
+    \skillset{Core}
     {
-        \tag{Web Application Development}
-        \tag{Mobile Application Development}
-        \tag{RESTful API Development}
+        \tag{Frontend + Backend Development}
+        \tag{iOS Development}
+        \tag{RESTful API Design}
+        \tag{UI/UX Design}
         \tagsep
-        \tag{Concurrent Program Design}
+        \tag{Dynamic Programming}
+        \tag{Concurrent Programming}
         \tag{Project Management}
         \tag{Reporting}
-        \tag{UI/UX Design}
-        \tag{Prototyping}
         \tagsep
+        \tag{Prototyping}
         \tag{Excellent Communication Skills}
+        \tag{High Coding Standards}
         \tag{Researching}
         \tag{Teaching}
     }
     \vspace{0.4em}
-    \skillset{Technical Skills}
+    \skillset{Technical}
     {
         \tag{Objective-C}
         \tag{Swift}

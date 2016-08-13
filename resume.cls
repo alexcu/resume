@@ -17,7 +17,7 @@
 
 %% BASELINE STRETCH
 \usepackage{setspace}
-\renewcommand{\baselinestretch}{1}
+\renewcommand{\baselinestretch}{1.1}
 
 %% RESUME SETTINGS
 \setlength\parindent{0pt} % Don't indent any paragraphs
@@ -102,3 +102,15 @@
 ]
 \def \tagsepsize {0.8ex}
 \newcommand\tag[2][]{\tikz[overlay]\node[tagstyle,#1] {#2};\phantom{#2}\hspace{1.0ex}}
+\tikzstyle{headtagstyle} = [
+    fill=white,
+    text=gray,
+    inner sep=.5em,
+    anchor=text,
+    text centered,
+    rectangle,
+    rounded corners=.25em,
+    minimum height=15pt,
+    right=0.1ex
+]
+\newcommand\taghead[2][]{\tikz[overlay]\node[headtagstyle,#1] {\bfseries #2};\phantom{#2}\hspace{1.0ex}}
