@@ -61,7 +61,7 @@
     \begin{adjustwidth}{-1.2in}{0} % Moves the main header out by 1.2 inches for the section margins
 
 
-        \parbox[b]{10cm}{{\Huge\bfseries Software Engineer} \\ {\Large Alex Cummaudo}}
+        \parbox[b]{10cm}{{\Huge\bfseries Alex Cummaudo} \\ {\Large Software Engineer}}
         \hfill
         \parbox[b]{5cm}{\flushright{\small #1\\#2\\#3}}\\ % You may need to adjust 2.42cm
         %{\color{gray} \LARGE Resume}%
@@ -85,7 +85,6 @@
 \newcommand{\Csh}{C\nolinebreak\hspace{-.025em}\raisebox{.1ex}{\footnotesize\bf \#}\hspace{0.1ex}}
 
 %% TAG
-\documentclass{article}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \definecolor{tagcolor}{rgb}{0.122, 0.435, 0.698}
@@ -101,7 +100,7 @@
     right=0.1ex
 ]
 \def \tagsepsize {0.8ex}
-\newcommand\tag[2][]{\tikz[overlay]\node[tagstyle,#1] {#2};\phantom{#2}\hspace{1.0ex}}
+\newcommand\tag[2][]{\tikz[overlay]\node[tagstyle,#1] {#2};\phantom{#2}\hspace{2.0ex}}
 \tikzstyle{headtagstyle} = [
     fill=white,
     text=gray,
