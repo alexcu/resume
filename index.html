@@ -5,106 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Alex Cummaudo&#39;s Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta property="og:image" content="http://puu.sh/kSX3s/4f29e362c7.png">
+    <meta property="og:image" content="https://i.imgur.com/3wPvK25.png">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function() {
-        var RESUME_URL = 'https://github.com/alexcu/resume/raw/master/resume.pdf';
-        var resume = document.querySelector('#resume');
-        var footer = document.querySelector('footer');
-
-        resume.src += RESUME_URL;
-        footer.querySelector('a').href = RESUME_URL;
-
-        resume.addEventListener('load', function () {
-          footer.classList.add('open');
-        });
-
-
-      });
-    </script><!--autopopulate-resume-->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
       ga('create', 'UA-64067785-2', 'auto');
       ga('send', 'pageview');
 
-    </script><!--/google-analytics-->
+    </script>
+    <!--/google-analytics-->
     <style type="text/css">
       body {
-        overflow-y: none;
-        background-color: #d1d1d1;
-        color: #666;
-        font-family: sans-serif;
+        margin: 0;
       }
-      body::-webkit-scrollbar {
-        display: none;
-      }
-      iframe#resume {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+      object {
         width: 100%;
         height: 100vh;
-        z-index: 1;
       }
-      .loading {
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      footer {
-        position: fixed;
-        bottom: 1.5em;
-        width: 100%;
-        text-align: center;
-        font-size: 0.9em;
-        cursor: pointer;
-        z-index: 2;
-      }
-      footer a, footer a:visited {
-        color: #999;
-      }
-      footer a:hover {
-        color: #666;
-      }
-      footer.open {
-        width: auto;
-        background-color: rgba(147, 147, 147, 0.7);
-        left: 0;
-        bottom: 0;
-      }
-      footer.open:hover {
-        background-color: rgb(109, 110, 113);
-      }
-      footer.open a, footer.open a:visited, footer.open a:hover{
-        color: #fff;
-        text-decoration: none;
-        padding: 1em;
-        display: block;
-      }
-    </style><!--style-->
+    </style>
   </head>
   <body>
-    <div class="loading">
-      <div>
-        <p>Loading Google Docs Viewer...</p>
-        <img src="powered_by_google_on_white.png" alt="Powered by Google"/>
-      </div>
-    </div>
-    <iframe id="resume" src="http://docs.google.com/gview?embedded=true&url=" frameborder="0"></iframe>
-    <footer>
-      <a>Direct Download</a>
-    </footer>
+    <object
+      type='application/pdf'
+      data='https://cdn.rawgit.com/alexcu/resume/master/resume.pdf'>
+      <p>It appears you don't have Adobe Reader or PDF support in this web browser.
+        <a href="https://cdn.rawgit.com/alexcu/resume/master/resume.pdf'">Click here to download the PDF</a>. Or
+        <a href="http://get.adobe.com/reader/" target="_blank">click here to install Adobe Reader</a>.</p>
+      <embed src="https://cdn.rawgit.com/alexcu/resume/master/resume.pdf'" type="application/pdf" />
+    </object>
   </body>
 </html>
