@@ -1,5 +1,5 @@
 all:
-	$(MAKE) build clean
+	$(MAKE) build clean publish
 build:
 	# Create using PDFLaTeX
 	pdflatex \
@@ -18,3 +18,5 @@ clean:
 		! -iname "*.tex" \
 		! -iname "*.cls" \
 		-delete
+publish:
+	./publish.sh

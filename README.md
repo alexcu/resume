@@ -1,8 +1,1 @@
-When publishing live, ensure you re-tag:
-
-```
-$ git tag rm live
-$ git commit
-$ git tag live
-$ git push --tags
-```
+Be sure to run `./publish.sh` to make it live on the web.
