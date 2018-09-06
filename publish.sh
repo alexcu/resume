@@ -10,3 +10,4 @@ git commit -m "Update rawgit reference to $hash"
 git push origin master
 git checkout master
 git stash pop
+open "http://alexcu.github.io/resume"
