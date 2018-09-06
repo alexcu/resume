@@ -7,7 +7,7 @@ sed -i.bak -E "s/(\/\*<hash>\*\/\")([A-z0-9]{7})(\"\/\*<\/hash>\*\/\;)/\1$hash\3
 rm index.html.bak
 git add index.html
 git commit -m "Update rawgit reference to $hash"
-git push origin master
+git push origin gh-pages
 git checkout master
 git stash pop
 open "http://alexcu.github.io/resume"
