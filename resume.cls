@@ -1,28 +1,46 @@
+% =========================================================================
+% resume.cls --- Formatting for simple sectioned resume style
+%.           --- Compiled by Alex Cummaudo, 2013.
+% =========================================================================
+\typeout{Document Class `Alex Cummaudo Resume' <Modified: 2018, Alex Cummaudo>.}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{resume}[2013/06/15 Alex's Resume Class]
+\ProvidesClass{resume}[2018/09/18]
 
+%%
 %% BASE CLASS
+%%
 \LoadClass[11pt]{article}
 
+%%
 %% RESTRICTED GEOMETRY
+%%
 \RequirePackage[top=0.8in, bottom=0.8in, right=0.8in, left=2in]{geometry}
 \RequirePackage{changepage}
 
+%%
 %% ADDED PACKAGES
+%%
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
 \usepackage{hyperref}
 \usepackage{bold-extra}
 \usepackage{calc}
 
+%%
 %% BASELINE STRETCH
+%%
 \usepackage{setspace}
 \renewcommand{\baselinestretch}{1.1}
 
+%%
 %% RESUME SETTINGS
-\setlength\parindent{0pt} % Don't indent any paragraphs
-\titleformat{\section}[leftmargin]{\bfseries}{}{}{} % Make sections bold and inside the left margin
-\titlespacing*{\section}{1.2in}{3mm}{0mm} % Push in section headers by an inch
+%%
+% Don't indent any paragraphs
+\setlength\parindent{0pt} 
+% Make sections bold and inside the left margin
+\titleformat{\section}[leftmargin]{\bfseries}{}{}{} 
+% Push in section headers by an inch
+\titlespacing*{\section}{1.2in}{3mm}{0mm}
 
 % Kill itemize spacing
 \usepackage{enumitem}
@@ -56,60 +74,118 @@
 %%
 %% RESUME COMMANDS
 %%
-\newcommand{\makeheader}[3]
-{
-    \begin{adjustwidth}{-1.2in}{0} % Moves the main header out by 1.2 inches for the section margins
+\makeatletter
+\def\@maketitle{%
+  % Moves the main header out by 1.2 inches for the section margins
+  \begin{adjustwidth}{-1.2in}{0}
+    \parbox[b]{10cm}{{\Huge\bfseries \@author} \\ {\Large \@title}}
+    \hfill
+    % You may need to adjust 2.42cm
+    \parbox[b]{5cm}{\flushright{\small \phone \\ \email \\ \website}}\\ 
 
+    \vspace{-10mm}
 
-        \parbox[b]{10cm}{{\Huge\bfseries Alex Cummaudo} \\ {\Large Software Engineer}}
-        \hfill
-        \parbox[b]{5cm}{\flushright{\small #1\\#2\\#3}}\\ % You may need to adjust 2.42cm
-        %{\color{gray} \LARGE Resume}%
+    \begin{center}
+      \line(1,0){\linewidth} % Adds a horizontal line
+    \end{center}
 
-        \vspace{-10mm}
-
-        \begin{center}
-            \line(1,0){\linewidth} % Adds a horizontal line
-        \end{center}
-
-    \end{adjustwidth}
+  \end{adjustwidth}
 }
+\makeatother
 
 %%
 %% EXTRAS
 %%
-
-%% PRETTY C++\C# COMMAND
+% Pretty C++/C# Commands
 \usepackage{relsize}
 \newcommand{\Cpp}{C\nolinebreak\hspace{-.025em}\raisebox{.1ex}{\footnotesize\bf ++}\hspace{0.1ex}}
 \newcommand{\Csh}{C\nolinebreak\hspace{-.025em}\raisebox{.1ex}{\footnotesize\bf \#}\hspace{0.1ex}}
 
-%% TAG
+% Tag
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \definecolor{tagcolor}{rgb}{0.122, 0.435, 0.698}
 \tikzstyle{tagstyle} = [
-    fill=tagcolor,
-    text=white,
-    inner sep=.5em,
-    anchor=text,
-    text centered,
-    rectangle,
-    rounded corners=.25em,
-    minimum height=15pt,
-    right=0.1ex
+  fill=tagcolor,
+  text=white,
+  inner sep=.5em,
+  anchor=text,
+  text centered,
+  rectangle,
+  rounded corners=.25em,
+  minimum height=15pt,
+  right=0.1ex
 ]
 \def \tagsepsize {0.8ex}
-\newcommand\tag[2][]{\tikz[overlay]\node[tagstyle,#1] {#2};\phantom{#2}\hspace{2.0ex}}
+\newcommand\tag[2][]{\tikz[overlay]\node[tagstyle,#1] {\textcolor{white}{#2}};\phantom{#2}\hspace{2.0ex}}
 \tikzstyle{headtagstyle} = [
-    fill=white,
-    text=gray,
-    inner sep=.5em,
-    anchor=text,
-    text centered,
-    rectangle,
-    rounded corners=.25em,
-    minimum height=15pt,
-    right=0.1ex
+  fill=white,
+  text=gray,
+  inner sep=.5em,
+  anchor=text,
+  text centered,
+  rectangle,
+  rounded corners=.25em,
+  minimum height=15pt,
+  right=0.1ex
 ]
 \newcommand\taghead[2][]{\tikz[overlay]\node[headtagstyle,#1] {\bfseries #2};\phantom{#2}\hspace{1.0ex}}
+
+%%
+%% SECTION COMMANDS
+%%
+\newcommand{\award}[4] {
+  {\fontseries{b} \normalsize #1 \hfill #4}
+
+  {\small #2}\\
+  {\footnotesize Awarded by #3}
+  \bigskip
+}
+\newcommand{\education}[6] {
+  {\fontseries{b} \normalsize #1 \hfill {#2}--{#3}}\\
+  {\small #4}\\
+  {\footnotesize #5}
+  
+  {\scriptsize #6}
+  \bigskip
+}
+\newcommand{\job}[6] {
+  {\fontseries{b} \normalsize #1 \hfill {#2}--{#3}}\\
+  {
+    \small
+    #4\\
+    {\footnotesize #5}
+    \begin{itemize}
+      #6
+    \end{itemize}
+  }
+  \bigskip
+}
+\newcommand{\project}[5] {
+  {\fontseries{b} \normalsize #1 \hfill #2 }\\
+  {
+    \small
+    {\scriptsize #3 \small \hfill #4}\vspace{6pt}
+    \begin{itemize}
+      #5
+    \end{itemize}
+  }
+  \bigskip
+}
+\newcommand{\publication}[5] {
+  {\fontseries{b} \normalsize #1 \hfill #2 }\\
+  {
+    \small
+    {\small \textit{#3} \\ \footnotesize #4 \\ \scriptsize DOI: \href{http://doi.org/#5}{#5} }
+  }
+  \bigskip
+}
+\newcommand{\tagsep} {
+  \vspace{\tagsepsize}\\
+}
+\newcommand{\skillset}[2] {
+  {
+    \\\textcolor{gray}{\footnotesize \uppercase \bfseries #1}\vspace{0.6ex}\\
+    {\mdseries #2}
+  }
+}

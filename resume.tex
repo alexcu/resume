@@ -1,25 +1,21 @@
 \documentclass[a4paper]{resume}
 
-\input{./sections/awards.tex}
-\input{./sections/contact.tex}
-\input{./sections/education.tex}
-\input{./sections/experience.tex}
-\input{./sections/extra.tex}
-\input{./sections/projects.tex}
-\input{./sections/publications.tex}
-\input{./sections/skills.tex}
-\input{./sections/references.tex}
+\author{Alex Cummaudo}
+\title{Research Software Engineer}
+\def \phone{}
+\def \email{\href{mailto:alexcu@me.com}{alexcu@me.com}}
+\def \website{\href{alexcu.me}{https://alexcu.me}}
 
 \begin{document}
 
-\def \sepspace {\vspace{1em}}
-\makeheader{\contactemail}{\contactwebsite}{\contactphone}
-\section{Skills}{\skillstechnical}
-\section{Experience}{\experience}
-\section{Publications}{\publications}
-\section{Open Source}{\projects}
-\section{Education}{\education}
-\section{Awards}{\awards}
-\section{References}{\references}
+\maketitle
+
+\input{sections/skills}
+\input{sections/experience}
+\input{sections/publications}
+\input{sections/projects}
+\input{sections/education}
+\input{sections/awards}
+\input{sections/references}
 
 \end{document}
