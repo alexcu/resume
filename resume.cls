@@ -33,7 +33,7 @@
 %% BASELINE STRETCH
 %%
 \usepackage{setspace}
-\renewcommand{\baselinestretch}{1.1}
+\renewcommand{\baselinestretch}{1.25}
 
 %%
 %% RESUME SETTINGS
@@ -177,11 +177,11 @@
   {\small #2}\\
 }
 \newcommand{\education}[6] {
-  \chevron{} {\fontseries{b} \normalsize #1  \daterange{#2}{#3}}\\
+  \chevron{} {\fontseries{b} \normalsize #1 ~ \daterange{#2}{#3}}\\
   {\small #4}\\
   {\footnotesize #5}
 
-  \bigskip
+  \smallskip
 }
 \newcommand{\job}[6] {
   {\fontseries{b} \normalsize #4 ~ \daterange{#2}{#3}}\\
@@ -201,7 +201,7 @@
       \end{itemize}
     \end{multicols}
   }
-  \medskip
+  \smallskip
 }
 \newcommand{\project}[5] {
   {\fontseries{b} \normalsize #1}\\
