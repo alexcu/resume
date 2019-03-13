@@ -33,7 +33,7 @@
 %% BASELINE STRETCH
 %%
 \usepackage{setspace}
-\renewcommand{\baselinestretch}{1.25}
+\renewcommand{\baselinestretch}{1.2}
 
 %%
 %% RESUME SETTINGS
