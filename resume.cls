@@ -14,7 +14,17 @@
 %%
 %% RESTRICTED GEOMETRY
 %%
-\RequirePackage[top=0.7in, bottom=0.7in, right=0.6in, left=0.6in]{geometry}
+\newlength{\margintop}
+\newlength{\marginbottom}
+\newlength{\marginleft}
+\newlength{\marginright}
+
+\setlength{\margintop}{0.6in}
+\setlength{\marginbottom}{0.9in}
+\setlength{\marginleft}{0.6in}
+\setlength{\marginright}{\marginleft}
+
+\RequirePackage[top=\margintop, bottom=\marginbottom, left=\marginleft, right=\marginright]{geometry}
 \RequirePackage{changepage}
 
 %%
@@ -57,7 +67,7 @@
   \large\center\bfseries
 }{}{0pt}{
   \color{theme}
-  \rule{0.75\textwidth}{1pt}\\
+  \rule{0.75\textwidth}{.9pt}\\
   \faChevronRight{}~~} 
 \titleformat{\subsection}{
   \footnotesize\bfseries\color{gray}
@@ -186,20 +196,21 @@
 \newcommand{\job}[6] {
   {\fontseries{b} \normalsize #4 ~ \daterange{#2}{#3}}\\
   {
+    \medskip
     \small
     #1
-    %{\footnotesize #5}
-    \begin{multicols}{2}
-      \raggedright
-      \subsection{Responsibilities}
-      \begin{itemize}
-        #5
-      \end{itemize}
-      \subsection{Achievements}
-      \begin{itemize}
-        #6
-      \end{itemize}
-    \end{multicols}
+    \ifx&#5&\else
+    \subsection{Responsibilities}
+    \begin{itemize}
+      #5
+    \end{itemize}
+    \fi
+    \if&#6&\else
+    \subsection{Achievements}
+    \begin{itemize}
+      #6
+    \end{itemize}
+    \fi
   }
   \smallskip
 }
