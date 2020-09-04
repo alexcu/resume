@@ -61,14 +61,14 @@
 \definecolor{themeyellow}{HTML}{E6883B}
 
 % Don't indent any paragraphs
-\setlength\parindent{0pt} 
+\setlength\parindent{0pt}
 % Make sections bold and inside the left margin
 \titleformat{\section}{
   \large\center\bfseries
 }{}{0pt}{
   \color{theme}
   \rule{0.75\textwidth}{.9pt}\\
-  \faChevronRight{}~~} 
+  \faChevronRight{}~~}
 \titleformat{\subsection}{
   \footnotesize\bfseries\color{gray}
 }{}{0pt}{\MakeUppercase}
@@ -115,7 +115,7 @@
       {\Huge \bfseries \@author \smallskip}\\
       {\Large \@title}
     \end{minipage}
-    \begin{minipage}[t]{0.6\linewidth}  
+    \begin{minipage}[t]{0.6\linewidth}
       \hfill
       \small
       \color{darkgray}
@@ -194,11 +194,11 @@
   \smallskip
 }
 \newcommand{\job}[6] {
-  {\fontseries{b} \normalsize #4 ~ \daterange{#2}{#3}}\\
+  {\fontseries{b} \normalsize #4}\\
   {
     \medskip
     \small
-    #1
+    {#1 ~ \daterange{#2}{#3}}
     \ifx&#5&\else
     \subsection{Responsibilities}
     \begin{itemize}
